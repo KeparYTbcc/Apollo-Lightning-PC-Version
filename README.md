@@ -1,3 +1,5 @@
+![Apollo Lightning App Icon (from Google android Playstore)](https://play-lh.googleusercontent.com/MmK_EubdKrAWkhehvvxdylkQT2XNhl-wMmUj77icVe5MD12GWycWDqw8QaVBUspQEiA=w240-h480-rw)
+
 # LED Controller CLI
 
 LEDS controller is only controllable via their "Apollo Lightning" app. I barely use my phone (or it's often dead), so this tool became a need — and I had fun making scripts and animations for my lights.
@@ -95,3 +97,4 @@ Drop issues or PRs on the project repository. No attached license by default —
 
 ---
 Created to make my lights usable without the phone app and to experiment with animations.
+
