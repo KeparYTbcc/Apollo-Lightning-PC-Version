@@ -1,0 +1,15 @@
+# BLE LED Controller Python Module Requirements
+
+# Core dependency for BLE communication
+bleak>=0.20.0
+
+# Optional: For enhanced logging
+# colorlog>=6.7.0
+
+# Optional: For async support (Python 3.7+ includes asyncio)
+# No additional packages needed for Python 3.7+
+
+# For development/testing (optional)
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+
