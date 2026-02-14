@@ -616,18 +616,29 @@ Examples:
     
     # If no command, launch GUI
     if not has_command:
-        print("=" * 60)
-        print("BLE LED Controller - Graphical Interface")
-        print("=" * 60)
-        print("\nNo command-line arguments provided.")
-        print("Launching graphical interface...\n")
-        print("GUI implementation not yet available.")
-        print("Please use command-line arguments to control the LED:\n")
-        print("  py main.py --help    # Show all available commands")
-        print("  py main.py --on      # Turn LED on")
-        print("  py main.py --off     # Turn LED off")
-        print("  py main.py --list-modes  # List available modes\n")
-        return 0
+        try:
+            # Try to launch GUI
+            from gui import main as gui_main
+            gui_main()
+            return 0
+        except ImportError as e:
+            print("=" * 60)
+            print("BLE LED Controller - Graphical Interface")
+            print("=" * 60)
+            print("\nNo command-line arguments provided.")
+            print("Error: Could not launch GUI. PyQt5 may not be installed.\n")
+            print("Please use command-line arguments to control the LED:\n")
+            print("  py main.py --help    # Show all available commands")
+            print("  py main.py --on      # Turn LED on")
+            print("  py main.py --off     # Turn LED off")
+            print("  py main.py --list-modes  # List available modes\n")
+            print(f"Import error: {e}\n")
+            return 1
+        except Exception as e:
+            print(f"Error launching GUI: {e}")
+            import traceback
+            traceback.print_exc()
+            return 1
     
     # Create CLI instance
     # Priority: --mac > --device > saved default MAC
@@ -690,11 +701,5 @@ Examples:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        # No arguments provided, launch GUI
-        import gui
-        gui.main()
-    else:
-        # Arguments provided, run CLI
-        exit_code = asyncio.run(main())
-        sys.exit(exit_code)
+    exit_code = asyncio.run(main())
+    sys.exit(exit_code)
