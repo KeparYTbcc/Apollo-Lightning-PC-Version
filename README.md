@@ -2,7 +2,7 @@
 
 # LED Controller CLI
 
-LEDS controller is only controllable via their "Apollo Lightning" app. I barely use my phone (or it's often dead), so this tool became a need — and I had fun making scripts and animations for my lights.
+LEDS controller is only controllable via their "Apollo Lightning" app. I barely use my phone (or it's often dead), so this tool became a need, and I had fun making scripts and animations for my lights.
 
 Their Website: https://www.qh-tek.com/
 
@@ -88,13 +88,14 @@ You can also use the included `build.bat` if present.
 
 ## Notes
 
-- On Windows the `bleak.backends.corebluetooth` warning during build is harmless — it's the macOS backend being skipped.
+- On Windows the `bleak.backends.corebluetooth` warning during build is harmless - it's the macOS backend being skipped.
 - If you run into issues, make sure the correct Python interpreter/venv is active (use `python`, not `py`, while the venv is activated).
 
 ## License & Contribute
 
-Drop issues or PRs on the project repository. No attached license by default — add one if you want to reuse this code publicly.
+Drop issues or PRs on the project repository. No attached license by default - add one if you want to reuse this code publicly.
 
 ---
 Created to make my lights usable without the phone app and to experiment with animations.
+
 
