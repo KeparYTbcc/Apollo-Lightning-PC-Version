@@ -690,5 +690,11 @@ Examples:
 
 
 if __name__ == "__main__":
-    exit_code = asyncio.run(main())
-    sys.exit(exit_code)
+    if len(sys.argv) == 1:
+        # No arguments provided, launch GUI
+        import gui
+        gui.main()
+    else:
+        # Arguments provided, run CLI
+        exit_code = asyncio.run(main())
+        sys.exit(exit_code)
