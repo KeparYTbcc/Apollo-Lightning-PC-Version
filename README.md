@@ -11,6 +11,8 @@ Their Website: https://www.qh-tek.com/
 - A small command-line tool to control BLE LED controllers compatible with the Apollo app.
 - Features: scanning, direct MAC connection, default MAC storage, color presets (save/load/list), mode selection, brightness and more.
 
+![Demo Screenshot (2/13/2026)](./Screenshot.png)
+
 ## Quick start
 
 1. Create and activate a virtual env (Windows example):
@@ -97,5 +99,6 @@ Drop issues or PRs on the project repository. No attached license by default - a
 
 ---
 Created to make my lights usable without the phone app and to experiment with animations.
+
 
 
